@@ -1,0 +1,46 @@
+<% include partials/_header %>
+
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-md-5 offset-md-3 card">
+      <div class="card-body">
+        <form action="/update/<%= data.id %>" method="POST">
+          <div class="form-group">
+            <input type="hidden" name="username" value="<%= data.username%>" placeholder="User ID" class="form-control">
+          </div>
+          <div class="form-group">
+            <input type="text" name="fullname" value="<%= data.fullname%>" placeholder="Nama" maxlength="35" class="form-control" autofocus>
+          </div>
+          <div class="form-group">
+            <input name="password" value="<%= data.password%>" placeholder="Sandi" type="hidden" class="form-control" id="exampleInputPassword1" autofocus>
+          </div>
+          <div class="form-group">
+            <input name="confirm" value="<%= data.confirm%>" placeholder="Konfirmasi Sandi" type="hidden" class="form-control" id="exampleInputPassword1" autofocus>
+          </div>
+          <div class="form-group">
+            <input type="text" name="jabatan" value="<%= data.jabatan%>" placeholder="Jabatan" maxlength="20" class="form-control" autofocus>
+          </div>
+          <div class="form-group">
+            <select name="divisi" placeholder="Divisi" class="form-control">
+              <option value="Developer">Developer</option>
+              <option value="HRD">HRD</option>
+              <option value="Marketing">Marketing</option>
+              <option value="Sales">Sales</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <input type="text" name="alamat" value="<%= data.alamat%>" placeholder="Alamat" maxlength="10" class="form-control" autofocus>
+          </div>
+            
+
+          <button type="submit" class="btn btn-primary">
+            UBAH DATA
+          </button>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<% include partials/_footer %>
